@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.css />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="fotorama-wrap">
+					<div class="fotorama" data-nav="thumbs" data-arrows="false">
+					
+						<a data-img="http://s.fotorama.io/1.jpg">One</a>
+						<div data-img="http://s.fotorama.io/2.jpg"><a href="https://www.weblancer.net/jobs/">Two</a></div>
+						<div data-img="http://s.fotorama.io/3.jpg"><em>Three</em></div>
+						<div data-img="http://s.fotorama.io/4.jpg"><em>Three</em></div>
+						<div data-img="http://s.fotorama.io/5.jpg"><em>Three</em></div>
+						<div data-img="http://s.fotorama.io/6.jpg"><em>Three</em></div>
+						<div data-img="http://s.fotorama.io/7.jpg"><em>Three</em></div>
+						<div data-img="http://s.fotorama.io/8.jpg"><em>Three</em></div>
+					</div>
+					<i class="fa fa-chevron-left"></i>
+					<i class="fa fa-chevron-right"></i>
+				</div>
+</div>
+</div>
+</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+	<script>
+		var fotorama = $('.fotorama').fotorama({
+			thumbborderwidth: 0
+		}).data('fotorama');
+
+		$('.fa-chevron-left').click(function(){
+			fotorama.show('<');
+
+		});
+		$('.fa-chevron-right').click(function(){
+			fotorama.show('>');                        
+		});
+
+		
+		// $('.fotorama__nav__frame--thumb').each(function(index, elem) {
+		// 		var $th = $(elem);
+		// 		var border = document.createElement('div');
+
+		// 		border.className = 'fotorama__thumb-border--custom';
+				
+		// 		$th.append(border);
+			
+		// });
+
+		// $('.fotorama__nav__frame--thumb').click(function() {
+		// 		$(this).find('.fotorama__thumb-border--custom')
+		// 						.fadeIn();
+		// 		$(this).siblings()
+		// 						.find('.fotorama__thumb-border--custom')
+		// 						.fadeOut();
+		// });
+	</script>
+</body>
+</html>
